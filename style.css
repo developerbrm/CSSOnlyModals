@@ -1,0 +1,113 @@
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: #111;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+}
+
+main {
+  min-height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
+  gap: calc(min(1rem, 5vw));
+}
+
+h1 {
+  margin-bottom: 2rem;
+}
+
+.open-btn {
+  background-color: crimson;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1rem;
+  border: none;
+  padding: 1em 3em;
+  text-align: center;
+  border-radius: 10px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.main-modal-container {
+  display: -ms-grid;
+  display: grid;
+  position: fixed;
+  place-content: center;
+  min-height: 100vh;
+  width: 100%;
+  -webkit-transition: 0.1s ease-in;
+  transition: 0.1s ease-in;
+  -webkit-filter: opacity(0);
+          filter: opacity(0);
+  pointer-events: none;
+  inset: 0;
+}
+
+.main-modal-container .main-modal {
+  padding: calc(min(5%, 3em));
+  max-width: 800px;
+  text-align: center;
+  background-color: #222;
+  border-radius: 10px;
+}
+
+.main-modal-container .main-modal h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0;
+  color: lavender;
+}
+
+.main-modal-container .main-modal p {
+  color: #eee;
+  margin: 2rem;
+}
+
+.main-modal-container .main-modal .close-btn {
+  background-color: crimson;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.2rem;
+  border: none;
+  padding: 0.5em 3em;
+  text-align: center;
+  border-radius: 10px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.main-modal-container:target {
+  -webkit-filter: opacity(1);
+          filter: opacity(1);
+  pointer-events: all;
+}
+
+section:nth-of-type(2) .open-btn,
+section:nth-of-type(2) .close-btn {
+  background-color: rebeccapurple !important;
+}
+
+section:nth-of-type(3) .open-btn,
+section:nth-of-type(3) .close-btn {
+  background-color: darkcyan !important;
+}
+
+section:nth-of-type(4) .open-btn,
+section:nth-of-type(4) .close-btn {
+  background-color: darkorange !important;
+}
